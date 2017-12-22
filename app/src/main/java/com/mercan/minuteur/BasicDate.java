@@ -23,4 +23,13 @@ public class BasicDate {
     public int getSeconds() {
         return seconds;
     }
+
+    @Override
+    public String toString() {
+        return "BasicDate{" +
+                "hours=" + hours +
+                ", minutes=" + minutes +
+                ", seconds=" + seconds +
+                '}';
+    }
 }
