@@ -6,6 +6,12 @@ public interface AlarmBasicDateManager {
 
     void stop();
 
+    /**
+     * Add amount of time before {@link EndListener#onMinuteurEnded()}.
+     *
+     * @param minutes Time in minutes to add before {@link EndListener#onMinuteurEnded()}.
+     * @return True if succeed. Fail if not running.
+     */
     boolean addTime(int minutes);
 
     boolean isRunning();
@@ -17,6 +23,10 @@ public interface AlarmBasicDateManager {
     BasicDate getTimeLeft();
 
     interface EndListener {
+
+        /**
+         * Minuteur ended.
+         */
         void onMinuteurEnded();
 
         void onMinuteurAdvance();
